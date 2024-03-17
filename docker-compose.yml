@@ -15,7 +15,7 @@ services:
 
   mongo:
     image: mongo
-    container_name: aurore-app-dev-mongo
+    container_name: ${SERVICE_NAME}-mongo
     restart: unless-stopped
     volumes:
       - mongodb:/data/db
@@ -29,7 +29,7 @@ services:
 
   mongo-express:
     image: mongo-express
-    container_name: aurore-app-dev-mongo-adminer
+    container_name: ${SERVICE_NAME}-mongo-adminer
     restart: unless-stopped
     ports:
       - 8081:8081
